@@ -16,6 +16,11 @@ resources:
   - ../../../../base/core/namespaces/aicoe-meteor
   - ../../../../base/core/namespaces/apicurio-apicurio-registry
   - ../../../../base/core/namespaces/as-pushgateway
+  - ../../../../base/core/namespaces/baaas-dfm
+  - ../../../../base/core/namespaces/baaas-dfs
+  - ../../../../base/core/namespaces/baaas-dmn-jit
+  - ../../../../base/core/namespaces/baaas-modeler
+  - ../../../../base/core/namespaces/baaas-trusty-ai
   - ../../../../base/core/namespaces/b4mad-minecraft
   - ../../../../base/core/namespaces/chi-rhug
   - ../../../../base/core/namespaces/cnv-testing
