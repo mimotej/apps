@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Accessing buckets from outside the cluster &#8212; GitOps Docs</title>
+    <title>OpenShift Data Foundation &#8212; GitOps Docs</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Claiming S3-compatible object store buckets" href="claiming_object_store.html" />
-    <link rel="prev" title="OpenShift Container Storage" href="README.html" />
+    <link rel="next" title="Accessing buckets from outside the cluster" href="buckets-external-access.html" />
+    <link rel="prev" title="Vector on Operate First" href="../observatorium/vector/README.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -121,28 +121,11 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../about/README.html">
-   About
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../about/intro.html">
-     Getting started with Operate First
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
   <a class="reference internal" href="../acm/README.html">
    ACM
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -168,8 +151,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../acme/README.html">
    ACME
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -185,8 +168,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../argocd-gitops/README.html">
    ArgoCD
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -252,8 +235,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../vault_eso/README.html">
    Secret Management
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -294,8 +277,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../cluster-scope/README.html">
    Cluster Management
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -334,8 +317,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../cluster-scope/runbooks/runbook.html">
      Runbooks
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-    <label for="toctree-checkbox-7">
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -358,8 +341,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../development/README.html">
    Development
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -380,8 +363,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../kafka/README.html">
    Kafka
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -404,7 +387,24 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../grafana/README.html">
+  <a class="reference internal" href="../kubeval/README.html">
+   Kubeval validation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../kubeval/updating_schema_store.html">
+     Updating schemas in schema store
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../grafana/docs/README.html">
    Grafana
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
@@ -414,12 +414,12 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../grafana/add_grafana_dashboard.html">
+    <a class="reference internal" href="../grafana/docs/add_grafana_dashboard.html">
      Add a Grafana dashboard to OperateFirst Grafana
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../grafana/map_groups_to_roles.html">
+    <a class="reference internal" href="../grafana/docs/map_groups_to_roles.html">
      Adding permissions in Grafana
     </a>
    </li>
@@ -473,17 +473,17 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="README.html">
-   OpenShift Container Storage
+  <a class="current reference internal" href="#">
+   OpenShift Data Foundation
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
   <label for="toctree-checkbox-12">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="buckets-external-access.html">
      Accessing buckets from outside the cluster
     </a>
    </li>
@@ -494,7 +494,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="runbook.html">
-     OpenShift Container Storage (OCS) Runbook
+     OpenShift Data Foundation (ODF) Runbook
     </a>
    </li>
   </ul>
@@ -873,7 +873,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/operate-first/apps/issues/new?title=Issue%20on%20page%20%2Fcontent/ocs/buckets-external-access.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/operate-first/apps/issues/new?title=Issue%20on%20page%20%2Fcontent/odf/README.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -901,7 +901,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/content/ocs/buckets-external-access.md"
+        <a href="../../_sources/content/odf/README.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -938,124 +938,23 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#creating-a-bucket">
-   Creating a bucket
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#accessing-a-bucket-from-outside-the-cluster">
-   Accessing a bucket from outside the cluster
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#getting-the-api-endpoint">
-     Getting the API endpoint
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#extract-bucket-information">
-     Extract bucket information
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#accessing-a-bucket-using-the-aws-cli">
-     Accessing a bucket using the AWS CLI
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#accessing-a-bucket-using-the-minio-cli">
-     Accessing a bucket using the MinIO CLI
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#accessing-a-bucket-using-s3cmd">
-     Accessing a bucket using s3cmd
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Accessing buckets from outside the cluster</h1>
+                <h1>OpenShift Data Foundation</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#creating-a-bucket">
-   Creating a bucket
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#accessing-a-bucket-from-outside-the-cluster">
-   Accessing a bucket from outside the cluster
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#getting-the-api-endpoint">
-     Getting the API endpoint
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#extract-bucket-information">
-     Extract bucket information
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#accessing-a-bucket-using-the-aws-cli">
-     Accessing a bucket using the AWS CLI
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#accessing-a-bucket-using-the-minio-cli">
-     Accessing a bucket using the MinIO CLI
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#accessing-a-bucket-using-s3cmd">
-     Accessing a bucket using s3cmd
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -1063,170 +962,10 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="accessing-buckets-from-outside-the-cluster">
-<h1>Accessing buckets from outside the cluster<a class="headerlink" href="#accessing-buckets-from-outside-the-cluster" title="Permalink to this headline">#</a></h1>
-<section id="creating-a-bucket">
-<h2>Creating a bucket<a class="headerlink" href="#creating-a-bucket" title="Permalink to this headline">#</a></h2>
-<p>To create a bucket, submit an <code class="docutils literal notranslate"><span class="pre">ObjectBucketClaim</span></code> manifest such as:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apiVersion</span><span class="p">:</span> <span class="n">objectbucket</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">v1alpha1</span>
-<span class="n">kind</span><span class="p">:</span> <span class="n">ObjectBucketClaim</span>
-<span class="n">metadata</span><span class="p">:</span>
-  <span class="n">name</span><span class="p">:</span> <span class="n">example</span><span class="o">-</span><span class="n">obc</span>
-<span class="n">spec</span><span class="p">:</span>
-  <span class="n">generateBucketName</span><span class="p">:</span> <span class="n">example</span><span class="o">-</span><span class="n">obc</span>
-  <span class="n">storageClassName</span><span class="p">:</span> <span class="n">openshift</span><span class="o">-</span><span class="n">storage</span><span class="o">.</span><span class="n">noobaa</span><span class="o">.</span><span class="n">io</span>
-</pre></div>
+  <section class="tex2jax_ignore mathjax_ignore" id="openshift-data-foundation">
+<h1>OpenShift Data Foundation<a class="headerlink" href="#openshift-data-foundation" title="Permalink to this headline">#</a></h1>
+<div class="toctree-wrapper compound">
 </div>
-<p>After submitting this to the cluster, it should shortly become
-<code class="docutils literal notranslate"><span class="pre">Bound</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ oc get objectbucketclaim
-NAME          STORAGE-CLASS                 PHASE   AGE
-example-obc   openshift-storage.noobaa.io   Bound   9m9s
-</pre></div>
-</div>
-<p>Once your claim is bound, you will find two additional resources in
-your target namespace:</p>
-<ul class="simple">
-<li><p>A <code class="docutils literal notranslate"><span class="pre">ConfigMap</span></code> named after your claim</p></li>
-<li><p>A <code class="docutils literal notranslate"><span class="pre">Secret</span></code> named after your bucket</p></li>
-</ul>
-<p>The <code class="docutils literal notranslate"><span class="pre">ConfigMap</span></code> contains the internal hostname for the object storage
-API endpoint and the name of your bucket:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apiVersion</span><span class="p">:</span> <span class="n">v1</span>
-<span class="n">kind</span><span class="p">:</span> <span class="n">ConfigMap</span>
-<span class="n">metadata</span><span class="p">:</span>
-  <span class="n">labels</span><span class="p">:</span>
-    <span class="n">app</span><span class="p">:</span> <span class="n">noobaa</span>
-    <span class="n">bucket</span><span class="o">-</span><span class="n">provisioner</span><span class="p">:</span> <span class="n">openshift</span><span class="o">-</span><span class="n">storage</span><span class="o">.</span><span class="n">noobaa</span><span class="o">.</span><span class="n">io</span><span class="o">-</span><span class="n">obc</span>
-    <span class="n">noobaa</span><span class="o">-</span><span class="n">domain</span><span class="p">:</span> <span class="n">openshift</span><span class="o">-</span><span class="n">storage</span><span class="o">.</span><span class="n">noobaa</span><span class="o">.</span><span class="n">io</span>
-  <span class="n">name</span><span class="p">:</span> <span class="n">example</span><span class="o">-</span><span class="n">obc</span>
-  <span class="n">namespace</span><span class="p">:</span> <span class="n">default</span>
-<span class="n">data</span><span class="p">:</span>
-  <span class="n">BUCKET_HOST</span><span class="p">:</span> <span class="n">s3</span><span class="o">.</span><span class="n">openshift</span><span class="o">-</span><span class="n">storage</span><span class="o">.</span><span class="n">svc</span>
-  <span class="n">BUCKET_NAME</span><span class="p">:</span> <span class="n">example</span><span class="o">-</span><span class="n">obc</span><span class="o">-</span><span class="n">a8f2836a</span><span class="o">-</span><span class="n">f80a</span><span class="o">-</span><span class="mi">4</span><span class="n">d52</span><span class="o">-</span><span class="n">b6f9</span><span class="o">-</span><span class="mi">16</span><span class="n">fdc8004b59</span>
-  <span class="n">BUCKET_PORT</span><span class="p">:</span> <span class="s2">&quot;443&quot;</span>
-  <span class="n">BUCKET_REGION</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
-  <span class="n">BUCKET_SUBREGION</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
-</pre></div>
-</div>
-<p>The <code class="docutils literal notranslate"><span class="pre">Secret</span></code> contains your credentials:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kind</span><span class="p">:</span> <span class="n">Secret</span>
-<span class="n">metadata</span><span class="p">:</span>
-  <span class="n">labels</span><span class="p">:</span>
-    <span class="n">app</span><span class="p">:</span> <span class="n">noobaa</span>
-    <span class="n">bucket</span><span class="o">-</span><span class="n">provisioner</span><span class="p">:</span> <span class="n">openshift</span><span class="o">-</span><span class="n">storage</span><span class="o">.</span><span class="n">noobaa</span><span class="o">.</span><span class="n">io</span><span class="o">-</span><span class="n">obc</span>
-    <span class="n">noobaa</span><span class="o">-</span><span class="n">domain</span><span class="p">:</span> <span class="n">openshift</span><span class="o">-</span><span class="n">storage</span><span class="o">.</span><span class="n">noobaa</span><span class="o">.</span><span class="n">io</span>
-  <span class="n">name</span><span class="p">:</span> <span class="n">example</span><span class="o">-</span><span class="n">obc</span>
-  <span class="n">namespace</span><span class="p">:</span> <span class="n">default</span>
-<span class="nb">type</span><span class="p">:</span> <span class="n">Opaque</span>
-<span class="n">apiVersion</span><span class="p">:</span> <span class="n">v1</span>
-<span class="n">data</span><span class="p">:</span>
-  <span class="n">AWS_ACCESS_KEY_ID</span><span class="p">:</span> <span class="o">...</span>
-  <span class="n">AWS_SECRET_ACCESS_KEY</span><span class="p">:</span> <span class="o">...</span>
-</pre></div>
-</div>
-</section>
-<section id="accessing-a-bucket-from-outside-the-cluster">
-<h2>Accessing a bucket from outside the cluster<a class="headerlink" href="#accessing-a-bucket-from-outside-the-cluster" title="Permalink to this headline">#</a></h2>
-<section id="getting-the-api-endpoint">
-<h3>Getting the API endpoint<a class="headerlink" href="#getting-the-api-endpoint" title="Permalink to this headline">#</a></h3>
-<p>The <code class="docutils literal notranslate"><span class="pre">ConfigMap</span></code> associated with your bucket claim provides the
-<em>internal</em> hostname for the object storage API. To access the bucket
-from outside the cluster, you will need to replace that with with the
-externally visible hosting.</p>
-<p>With appropriate access, you can run:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ oc -n openshift-storage get route s3 -o jsonpath=&#39;{.spec.host}{&quot;\n&quot;}&#39;
-</pre></div>
-</div>
-<p>On the <code class="docutils literal notranslate"><span class="pre">smaug</span></code> cluster, this will return:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">s3</span><span class="o">-</span><span class="n">openshift</span><span class="o">-</span><span class="n">storage</span><span class="o">.</span><span class="n">apps</span><span class="o">.</span><span class="n">smaug</span><span class="o">.</span><span class="n">na</span><span class="o">.</span><span class="n">operate</span><span class="o">-</span><span class="n">first</span><span class="o">.</span><span class="n">cloud</span>
-</pre></div>
-</div>
-<p>If you are unable to query the <code class="docutils literal notranslate"><span class="pre">openshift-storage</span></code> namespace, you may
-be able to replace <code class="docutils literal notranslate"><span class="pre">apps.smaug.na.operate-first.cloud</span></code> with the
-domain appropriate to your cluster.</p>
-</section>
-<section id="extract-bucket-information">
-<h3>Extract bucket information<a class="headerlink" href="#extract-bucket-information" title="Permalink to this headline">#</a></h3>
-<p>Extract information from your <code class="docutils literal notranslate"><span class="pre">Secret</span></code> and <code class="docutils literal notranslate"><span class="pre">ConfigMap</span></code> into
-environment variables:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">BUCKET_ENDPOINT</span><span class="o">=</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">s3</span><span class="o">-</span><span class="n">openshift</span><span class="o">-</span><span class="n">storage</span><span class="o">.</span><span class="n">apps</span><span class="o">.</span><span class="n">smaug</span><span class="o">.</span><span class="n">na</span><span class="o">.</span><span class="n">operate</span><span class="o">-</span><span class="n">first</span><span class="o">.</span><span class="n">cloud</span>
-<span class="n">export</span> <span class="n">BUCKET_NAME</span><span class="o">=</span><span class="s2">&quot;$(oc get configmap example-obc </span><span class="se">\</span>
-<span class="s2">  -o jsonpath=&#39;{.data.BUCKET_NAME}&#39;)&quot;</span>
-<span class="n">export</span> <span class="n">AWS_ACCESS_KEY_ID</span><span class="o">=</span><span class="s2">&quot;$(oc get secret example-obc </span><span class="se">\</span>
-<span class="s2">  -o jsonpath=&#39;{.data.AWS_ACCESS_KEY_ID}&#39; | base64 -d)&quot;</span>
-<span class="n">export</span> <span class="n">AWS_SECRET_ACCESS_KEY</span><span class="o">=</span><span class="s2">&quot;$(oc get secret example-obc </span><span class="se">\</span>
-<span class="s2">  -o jsonpath=&#39;{.data.AWS_SECRET_ACCESS_KEY}&#39; | base64 -d)&quot;</span>
-</pre></div>
-</div>
-</section>
-<section id="accessing-a-bucket-using-the-aws-cli">
-<h3>Accessing a bucket using the AWS CLI<a class="headerlink" href="#accessing-a-bucket-using-the-aws-cli" title="Permalink to this headline">#</a></h3>
-<p>Assuming you have configured the environment variables described in
-the “Extract bucket information” section, you can use the following
-<code class="docutils literal notranslate"><span class="pre">aws</span></code> commands to interact with your bucket.</p>
-<p>To upload an object to your bucket:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>aws --endpoint-url $BUCKET_ENDPOINT s3 cp README.md s3://$BUCKET_NAME
-</pre></div>
-</div>
-<p>To list objects in your bucket:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>aws --endpoint-url $BUCKET_ENDPOINT s3 ls $BUCKET_NAME
-</pre></div>
-</div>
-<p>To download an object from your bucket to a local file:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>aws --endpoint-url $BUCKET_ENDPOINT s3 cp s3://$BUCKET_NAME/README.md README.md
-</pre></div>
-</div>
-</section>
-<section id="accessing-a-bucket-using-the-minio-cli">
-<h3>Accessing a bucket using the MinIO CLI<a class="headerlink" href="#accessing-a-bucket-using-the-minio-cli" title="Permalink to this headline">#</a></h3>
-<p>Assuming you have configured the environment variables described in
-the “Extract bucket information” section, create a MinIO alias
-definition for your bucket:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mcli alias set example-obc $BUCKET_ENDPOINT $AWS_ACCESS_KEY_ID $AWS_SECRET_ACCESS_KEY
-</pre></div>
-</div>
-<p>To upload an object to your bucket:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mcli cp README.md example-obc/$BUCKET_NAME/
-</pre></div>
-</div>
-<p>To list objects in your bucket:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mcli ls example-obc/$BUCKET_NAME
-</pre></div>
-</div>
-<p>To download an object from your bucket to a local file:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mcli cp example-obc/$BUCKET_NAME/README.md README.md
-</pre></div>
-</div>
-</section>
-<section id="accessing-a-bucket-using-s3cmd">
-<h3>Accessing a bucket using s3cmd<a class="headerlink" href="#accessing-a-bucket-using-s3cmd" title="Permalink to this headline">#</a></h3>
-<p>Assuming you have configured the environment variables described in
-the “Extract bucket information” section, create a configuration file
-for accessing your bucket:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cat &lt;&lt;EOF &gt; s3cfg
-[default]
-access_key = $AWS_ACCESS_KEY_ID
-secret_key = $AWS_SECRET_ACCESS_KEY
-host_base = ${BUCKET_ENDPOINT##*/}
-host_bucket =
-EOF
-</pre></div>
-</div>
-<p>To upload an object to your bucket:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>s3cmd -c s3cfg put README.md s3://$BUCKET_NAME/
-</pre></div>
-</div>
-<p>To list objects in your bucket:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>s3cmd -c s3cfg ls s3://$BUCKET_NAME
-</pre></div>
-</div>
-<p>To download an object from your bucket to a local file:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>s3cmd -c s3cfg get s3://$BUCKET_NAME/README.md README.md
-</pre></div>
-</div>
-</section>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1242,7 +981,7 @@ EOF
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./content/ocs"
+            path: "./content/odf"
         },
         predefinedOutput: true
     }
@@ -1256,17 +995,17 @@ EOF
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="README.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../observatorium/vector/README.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">OpenShift Container Storage</p>
+            <p class="prev-next-title">Vector on Operate First</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="claiming_object_store.html" title="next page">
+    <a class='right-next' id="next-link" href="buckets-external-access.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Claiming S3-compatible object store buckets</p>
+        <p class="prev-next-title">Accessing buckets from outside the cluster</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

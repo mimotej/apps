@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Getting started with Operate First &#8212; GitOps Docs</title>
+    <title>Kubeval validation &#8212; GitOps Docs</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="ACM" href="../acm/README.html" />
-    <link rel="prev" title="About" href="README.html" />
+    <link rel="next" title="Updating schemas in schema store" href="updating_schema_store.html" />
+    <link rel="prev" title="Kafka Runbook" href="../kafka/runbook.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -120,29 +120,12 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="README.html">
-   About
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Getting started with Operate First
-    </a>
-   </li>
-  </ul>
- </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../acm/README.html">
    ACM
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -168,8 +151,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../acme/README.html">
    ACME
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -185,8 +168,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../argocd-gitops/README.html">
    ArgoCD
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -252,8 +235,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../vault_eso/README.html">
    Secret Management
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -294,8 +277,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../cluster-scope/README.html">
    Cluster Management
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -334,8 +317,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../cluster-scope/runbooks/runbook.html">
      Runbooks
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-    <label for="toctree-checkbox-7">
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -358,8 +341,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../development/README.html">
    Development
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -380,8 +363,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../kafka/README.html">
    Kafka
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -403,8 +386,25 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   Kubeval validation
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="updating_schema_store.html">
+     Updating schemas in schema store
+    </a>
+   </li>
+  </ul>
+ </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../grafana/README.html">
+  <a class="reference internal" href="../grafana/docs/README.html">
    Grafana
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
@@ -414,12 +414,12 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../grafana/add_grafana_dashboard.html">
+    <a class="reference internal" href="../grafana/docs/add_grafana_dashboard.html">
      Add a Grafana dashboard to OperateFirst Grafana
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../grafana/map_groups_to_roles.html">
+    <a class="reference internal" href="../grafana/docs/map_groups_to_roles.html">
      Adding permissions in Grafana
     </a>
    </li>
@@ -473,8 +473,8 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../ocs/README.html">
-   OpenShift Container Storage
+  <a class="reference internal" href="../odf/README.html">
+   OpenShift Data Foundation
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
   <label for="toctree-checkbox-12">
@@ -483,18 +483,18 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../ocs/buckets-external-access.html">
+    <a class="reference internal" href="../odf/buckets-external-access.html">
      Accessing buckets from outside the cluster
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../ocs/claiming_object_store.html">
+    <a class="reference internal" href="../odf/claiming_object_store.html">
      Claiming S3-compatible object store buckets
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../ocs/runbook.html">
-     OpenShift Container Storage (OCS) Runbook
+    <a class="reference internal" href="../odf/runbook.html">
+     OpenShift Data Foundation (ODF) Runbook
     </a>
    </li>
   </ul>
@@ -873,7 +873,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/operate-first/apps/issues/new?title=Issue%20on%20page%20%2Fcontent/about/intro.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/operate-first/apps/issues/new?title=Issue%20on%20page%20%2Fcontent/kubeval/README.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -901,7 +901,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/content/about/intro.md"
+        <a href="../../_sources/content/kubeval/README.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -961,23 +961,8 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#there-are-3-parts-to-operating-first">
-   There are 3 parts to Operating First
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#observing-and-interacting-with-the-ops-team">
-   Observing and interacting with the Ops team
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bring-your-project">
-   Bring your project
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#understanding-the-environment">
-   Understanding the environment
+  <a class="reference internal nav-link" href="#usage">
+   Usage
   </a>
  </li>
 </ul>
@@ -989,7 +974,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Getting started with Operate First</h1>
+                <h1>Kubeval validation</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1000,23 +985,8 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#there-are-3-parts-to-operating-first">
-   There are 3 parts to Operating First
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#observing-and-interacting-with-the-ops-team">
-   Observing and interacting with the Ops team
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bring-your-project">
-   Bring your project
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#understanding-the-environment">
-   Understanding the environment
+  <a class="reference internal nav-link" href="#usage">
+   Usage
   </a>
  </li>
 </ul>
@@ -1029,47 +999,30 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="getting-started-with-operate-first">
-<h1>Getting started with Operate First<a class="headerlink" href="#getting-started-with-operate-first" title="Permalink to this headline">#</a></h1>
-<p>If you are an open source developer interested in bringing your project to an Operate First environment, you have come to the right place.
-Below is important information and instructions on how to get started.</p>
-<section id="there-are-3-parts-to-operating-first">
-<h2>There are 3 parts to Operating First<a class="headerlink" href="#there-are-3-parts-to-operating-first" title="Permalink to this headline">#</a></h2>
-<ol class="simple">
-<li><p>Operate First is a concept of bringing pre-release open source software to a production cloud environment.</p></li>
-<li><p>The Open Infrastructure Labs is the upstream where the cloud operators and project developers work in the open to Operate First.</p></li>
-<li><p>The Mass Open Cloud (MOC) is a production cloud resource where projects are run.</p></li>
-</ol>
+  <section class="tex2jax_ignore mathjax_ignore" id="kubeval-validation">
+<h1>Kubeval validation<a class="headerlink" href="#kubeval-validation" title="Permalink to this headline">#</a></h1>
+<p>As a part of our CI pipelines in <code class="docutils literal notranslate"><span class="pre">apps</span></code> repository we are using kubeval to validate our schemas. Kubeval checks validity of the CRDs against the schemas stored in schema-store repository. If there are any errors, it is reported. This approach will check for api errors that can sneak through the <code class="docutils literal notranslate"><span class="pre">kustomize</span> <span class="pre">build</span></code> command. For example in following manifest <code class="docutils literal notranslate"><span class="pre">spec.port.targetPort</span></code> is not valid:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">route.openshift.io/v1</span><span class="w"></span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Route</span><span class="w"></span>
+<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kafdrop-route</span><span class="w"></span>
+<span class="nt">spec</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">targetPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span><span class="w"></span>
+<span class="w">  </span><span class="nt">to</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Service</span><span class="w"></span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kafdrop</span><span class="w"></span>
+</pre></div>
+</div>
+<p>This manifest will be properly build using <code class="docutils literal notranslate"><span class="pre">kustomize</span> <span class="pre">build</span></code> but <code class="docutils literal notranslate"><span class="pre">kubeval</span></code> will be able to catch this issue and report it back.</p>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">#</a></h2>
+<p>We can use kubeval on manifests which are either stored in files or we can input manifests from stdin. This is useful in our case, because we can pipe output from <code class="docutils literal notranslate"><span class="pre">kustomize</span> <span class="pre">build</span></code> to kubeval and check if manifests are correct.</p>
+<p>By default <code class="docutils literal notranslate"><span class="pre">kubeval</span></code> uses default schemas which can be found <a class="reference external" href="https://kubernetesjsonschema.dev">here</a>. This is not ideal in our case because we have many CRDs which do not have schemas in default repository. For this reason we are generating our own schemas and using them in kubeval (more about how we are generating and updating schemas can be found <a class="reference external" href="https://www.operate-first.cloud/apps/content/kubeval/updating_schema_store.html">here</a> and script used for generating schemas can be found <a class="reference external" href="https://github.com/operate-first/toolbox/blob/master/scripts/test-kubeval-validation">here</a>). To use generated schemas we are using <code class="docutils literal notranslate"><span class="pre">--schema-location</span></code> option.</p>
+<p>We are also using <code class="docutils literal notranslate"><span class="pre">--strict</span></code> option which allows no additional properties in schema. Last option we specify is <code class="docutils literal notranslate"><span class="pre">--skip-kinds</span></code> which allows us to skip validation of CRDs which don’t have valid schemas.</p>
 </section>
-<section id="observing-and-interacting-with-the-ops-team">
-<h2>Observing and interacting with the Ops team<a class="headerlink" href="#observing-and-interacting-with-the-ops-team" title="Permalink to this headline">#</a></h2>
-<p>Projects are expected to work with the ops team in the open in github <a class="reference external" href="https://github.com/operate-first">https://github.com/operate-first</a>
-There is also work done to manage the infrastructure that can be found in the Open Infrastructure Labs project <a class="reference external" href="https://github.com/open-infrastructure-labs">https://github.com/open-infrastructure-labs</a></p>
-<p>To see what’s happening right now, online chat is done at <a class="reference external" href="http://operatefirst.slack.com/">http://operatefirst.slack.com/</a>.
-There is an associated mailing list hosted by the MOC: Operate-first-users <a class="reference external" href="https://mail.massopen.cloud/mailman/listinfo/operate-first-users">https://mail.massopen.cloud/mailman/listinfo/operate-first-users</a></p>
-<p>Open Infrastructure Labs also has a mailing list: Openinfralabs <a class="reference external" href="http://lists.opendev.org/cgi-bin/mailman/listinfo/openinfralabs">http://lists.opendev.org/cgi-bin/mailman/listinfo/openinfralabs</a>
-You can view a dashboard in the OI Labs github to see an overview of what’s happening <a class="reference external" href="https://github.com/orgs/open-infrastructure-labs/projects/2">https://github.com/orgs/open-infrastructure-labs/projects/2</a></p>
-</section>
-<section id="bring-your-project">
-<h2>Bring your project<a class="headerlink" href="#bring-your-project" title="Permalink to this headline">#</a></h2>
-<p>To get connected and investigate bringing your project to the MOC, you can join the general mailing list at <a class="reference external" href="https://lists.operate-first.cloud/archives/list/community&#64;lists.operate-first.cloud/">https://lists.operate-first.cloud/archives/list/community&#64;lists.operate-first.cloud/</a> and introduce it.</p>
-<p>Next step is bringing the discussion to the “Operate First Project Coordination meeting”, which is held on alternate Wednesday’s 8:30AM US Eastern time. (even numbered weeks for 2020) Meeting url: <a class="reference external" href="https://meet.google.com/kea-qtds-enp?authuser=0&amp;hs=122">https://meet.google.com/kea-qtds-enp?authuser=0&amp;hs=122</a>. (email <a class="reference external" href="mailto:bburns&#37;&#52;&#48;redhat&#46;com">bburns<span>&#64;</span>redhat<span>&#46;</span>com</a> for an invite).</p>
-<p>There is another bi-weekly meeting an the alternate Wednesdays at 8:30 AM US Eastern time, called “MOC/ODH sprint planning” and it is primarily focused on the Ops team planning. (Odd numbered weeks for 2021) Meeting url: <a class="reference external" href="https://meet.google.com/oki-drge-wuc?authuser=0&amp;hs=122">https://meet.google.com/oki-drge-wuc?authuser=0&amp;hs=122</a></p>
-<p>More detailed information on onboarding to a cluster can be found here: <a class="reference external" href="https://www.operate-first.cloud/apps/content/cluster-scope/onboarding_to_cluster.html">https://www.operate-first.cloud/apps/content/cluster-scope/onboarding_to_cluster.html</a></p>
-</section>
-<section id="understanding-the-environment">
-<h2>Understanding the environment<a class="headerlink" href="#understanding-the-environment" title="Permalink to this headline">#</a></h2>
-<p>There are a few basic things that need to be understood about the Operate First environment at the MOC:</p>
-<ul class="simple">
-<li><p>Operate First is an open source initiative. It’s about operating your project software in the open in a production cloud environment.</p></li>
-<li><p>Operating at the MOC never implies that any feature or software will ship. Thus a new feature that is being considered can be tested without any implied commitment.</p></li>
-<li><p>Open Infrastructure Labs is an open source upstream aimed at cloud providers and operators and that is where much of the operate first work is being done.</p></li>
-<li><p>While a production cloud, the MOC is taking in pre-release software, and thus stability is not guaranteed, and should not be expected. No backup of user data is made. There is no SLA.</p></li>
-<li><p>It’s free, but the cost is commitment. The MOC is not a place to bring a project and then leave. It’s expected that the developers will actively participate with the operators when needed and be available to help sort out issues.</p></li>
-<li><p>The benefit to project developers is bringing back what’s learned to improve their project.</p></li>
-<li><p>Also, projects need to agree that telemetry can be freely harvested from the cloud. It’s purpose is to help evolve open source cloud operations and it extends to building AI Ops tooling.</p></li>
-</ul>
-</section>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1085,7 +1038,7 @@ You can view a dashboard in the OI Labs github to see an overview of what’s ha
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./content/about"
+            path: "./content/kubeval"
         },
         predefinedOutput: true
     }
@@ -1099,17 +1052,17 @@ You can view a dashboard in the OI Labs github to see an overview of what’s ha
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="README.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../kafka/runbook.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">About</p>
+            <p class="prev-next-title">Kafka Runbook</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../acm/README.html" title="next page">
+    <a class='right-next' id="next-link" href="updating_schema_store.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">ACM</p>
+        <p class="prev-next-title">Updating schemas in schema store</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>OpenShift Container Storage &#8212; GitOps Docs</title>
+    <title>Giving a user project role access in the smaug cluster &#8212; GitOps Docs</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,8 +53,6 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Accessing buckets from outside the cluster" href="buckets-external-access.html" />
-    <link rel="prev" title="Vector on Operate First" href="../observatorium/vector/README.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -119,30 +117,13 @@ const thebe_selector_output = ".output, .cell_output"
   GitOps
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../about/README.html">
-   About
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../about/intro.html">
-     Getting started with Operate First
-    </a>
-   </li>
-  </ul>
- </li>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../acm/README.html">
    ACM
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -168,8 +149,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../acme/README.html">
    ACME
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -185,8 +166,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../argocd-gitops/README.html">
    ArgoCD
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -252,8 +233,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../vault_eso/README.html">
    Secret Management
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -291,62 +272,62 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../cluster-scope/README.html">
+  <a class="reference internal" href="README.html">
    Cluster Management
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../cluster-scope/add_resource_quotas.html">
+    <a class="reference internal" href="add_resource_quotas.html">
      Adding Resource Quotas
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../cluster-scope/create_ocp_group.html">
+    <a class="reference internal" href="create_ocp_group.html">
      Adding an OCP group to Operate First Cloud
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../cluster-scope/add_user_to_group.html">
+    <a class="reference internal" href="add_user_to_group.html">
      Adding User to an OCP team
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../cluster-scope/offboarding_cluster.html">
+    <a class="reference internal" href="offboarding_cluster.html">
      Remove a Cluster from Operate First
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../cluster-scope/onboarding_project.html">
+    <a class="reference internal" href="onboarding_project.html">
      Onboard Project
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../cluster-scope/quotas.html">
+    <a class="reference internal" href="quotas.html">
      Resource Quota Tiers
     </a>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../cluster-scope/runbooks/runbook.html">
+    <a class="reference internal" href="runbooks/runbook.html">
      Runbooks
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-    <label for="toctree-checkbox-7">
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
      <i class="fas fa-chevron-down">
      </i>
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../cluster-scope/runbooks/emea/runbook.html">
+      <a class="reference internal" href="runbooks/emea/runbook.html">
        EMEA clusters
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../cluster-scope/runbooks/moc/runbook.html">
+      <a class="reference internal" href="runbooks/moc/runbook.html">
        MOC Clusters
       </a>
      </li>
@@ -358,8 +339,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../development/README.html">
    Development
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -380,8 +361,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../kafka/README.html">
    Kafka
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -404,7 +385,24 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../grafana/README.html">
+  <a class="reference internal" href="../kubeval/README.html">
+   Kubeval validation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../kubeval/updating_schema_store.html">
+     Updating schemas in schema store
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../grafana/docs/README.html">
    Grafana
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
@@ -414,12 +412,12 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../grafana/add_grafana_dashboard.html">
+    <a class="reference internal" href="../grafana/docs/add_grafana_dashboard.html">
      Add a Grafana dashboard to OperateFirst Grafana
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../grafana/map_groups_to_roles.html">
+    <a class="reference internal" href="../grafana/docs/map_groups_to_roles.html">
      Adding permissions in Grafana
     </a>
    </li>
@@ -472,29 +470,29 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
-   OpenShift Container Storage
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../odf/README.html">
+   OpenShift Data Foundation
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
   <label for="toctree-checkbox-12">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="buckets-external-access.html">
+    <a class="reference internal" href="../odf/buckets-external-access.html">
      Accessing buckets from outside the cluster
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="claiming_object_store.html">
+    <a class="reference internal" href="../odf/claiming_object_store.html">
      Claiming S3-compatible object store buckets
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="runbook.html">
-     OpenShift Container Storage (OCS) Runbook
+    <a class="reference internal" href="../odf/runbook.html">
+     OpenShift Data Foundation (ODF) Runbook
     </a>
    </li>
   </ul>
@@ -873,7 +871,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/operate-first/apps/issues/new?title=Issue%20on%20page%20%2Fcontent/ocs/README.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/operate-first/apps/issues/new?title=Issue%20on%20page%20%2Fcontent/cluster-scope/add_user_to_project_admin.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -901,7 +899,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/content/ocs/README.md"
+        <a href="../../_sources/content/cluster-scope/add_user_to_project_admin.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -938,23 +936,90 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prerequisite">
+   Prerequisite
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-an-ocp-group">
+   Create an OCP group
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#give-the-group-the-appropriate-rbac-roles-and-and-rolebindings">
+   Give the group the appropriate rbac(roles and and rolebindings)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#add-the-ocp-group-to-your-project-namespace">
+   Add the OCP group to your project/namespace
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>OpenShift Container Storage</h1>
+                <h1>Giving a user project role access in the smaug cluster</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prerequisite">
+   Prerequisite
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-an-ocp-group">
+   Create an OCP group
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#give-the-group-the-appropriate-rbac-roles-and-and-rolebindings">
+   Give the group the appropriate rbac(roles and and rolebindings)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#add-the-ocp-group-to-your-project-namespace">
+   Add the OCP group to your project/namespace
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -962,10 +1027,44 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="openshift-container-storage">
-<h1>OpenShift Container Storage<a class="headerlink" href="#openshift-container-storage" title="Permalink to this headline">#</a></h1>
-<div class="toctree-wrapper compound">
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="giving-a-user-project-role-access-in-the-smaug-cluster">
+<h1>Giving a user project role access in the smaug cluster<a class="headerlink" href="#giving-a-user-project-role-access-in-the-smaug-cluster" title="Permalink to this headline">#</a></h1>
+<section id="prerequisite">
+<h2>Prerequisite<a class="headerlink" href="#prerequisite" title="Permalink to this headline">#</a></h2>
+<p>A namespace for the project should already be created before starting.</p>
+</section>
+<section id="create-an-ocp-group">
+<h2>Create an OCP group<a class="headerlink" href="#create-an-ocp-group" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>The first step for giving you project role access should be to create an OCP group.
+After creating a OCP group you will add your github username to the group.</p></li>
+</ol>
+<ul class="simple">
+<li><p>Documentation on creating an OCP group can be found <a class="reference external" href="https://www.operate-first.cloud/apps/content/cluster-scope/create_ocp_group.html">here</a>.</p></li>
+<li><p>The directory that contains all of the OCP groups can be found <a class="reference external" href="https://github.com/operate-first/apps/tree/master/cluster-scope/base/user.openshift.io/groups">here</a></p></li>
+</ul>
+<ol class="simple">
+<li><p>After you create the group make sure to add your github username to the group by editing the <code class="docutils literal notranslate"><span class="pre">group.yaml</span></code> file.</p></li>
+</ol>
+</section>
+<section id="give-the-group-the-appropriate-rbac-roles-and-and-rolebindings">
+<h2>Give the group the appropriate rbac(roles and and rolebindings)<a class="headerlink" href="#give-the-group-the-appropriate-rbac-roles-and-and-rolebindings" title="Permalink to this headline">#</a></h2>
+<p>After creating a OCP group you must give the group the appropriate roles and rolebindings.</p>
+<ol class="simple">
+<li><p>Create a directory with the name of your OCP group <a class="reference external" href="https://github.com/operate-first/apps/tree/master/cluster-scope/components/project-admin-rolebindings">here</a>
+copy one of the other directories in that folder and use it as a template.</p></li>
+<li><p>Once the folder is copied, edit the <code class="docutils literal notranslate"><span class="pre">rbac.yaml</span></code> file and change <code class="docutils literal notranslate"><span class="pre">spec.metadata.name</span></code>.</p></li>
+<li><p>Change <code class="docutils literal notranslate"><span class="pre">spec.subjects.name</span></code> to the OCP group created in the previous instructions.</p></li>
+</ol>
+</section>
+<section id="add-the-ocp-group-to-your-project-namespace">
+<h2>Add the OCP group to your project/namespace<a class="headerlink" href="#add-the-ocp-group-to-your-project-namespace" title="Permalink to this headline">#</a></h2>
+<p>You have now created the OCP group. You must now add the OCP group to your namespace</p>
+<ol class="simple">
+<li><p>Open the following file: <code class="docutils literal notranslate"><span class="pre">cluster-scope/base/core/namespaces/&lt;yourproject&gt;/kustomization.yaml</span></code></p></li>
+<li><p>Add the path of the component that you created in <code class="docutils literal notranslate"><span class="pre">/apps/cluster-scope/components/project-admin-rolebindings</span></code> to the <code class="docutils literal notranslate"><span class="pre">components</span></code> section in the overlay <code class="docutils literal notranslate"><span class="pre">kustomization.yaml</span></code> file corresponding to the cluster you are deploying to. You can see examples of this <a class="reference external" href="https://github.com/operate-first/apps/tree/master/cluster-scope/components/project-admin-rolebindings">here</a>.</p></li>
+</ol>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -981,7 +1080,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./content/ocs"
+            path: "./content/cluster-scope"
         },
         predefinedOutput: true
     }
@@ -995,20 +1094,6 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../observatorium/vector/README.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Vector on Operate First</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="buckets-external-access.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Accessing buckets from outside the cluster</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>
