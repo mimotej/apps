@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Vault Runbook" href="runbook.html" />
+    <link rel="next" title="Secret creation using vault CLI and k8s auth" href="write_to_vault_with_k8s.html" />
     <link rel="prev" title="Restoring vault" href="restore_vault.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -242,17 +242,27 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="add_cluster_to_eso_and_vault.html">
+    <a class="reference internal" href="onboard_team_to_vault.html">
+     Onboard an OCP group to vault
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="create_external_secret.html">
+     Create External Secret in Operate First
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="enable_es_in_namespace.html">
+     Enable External Secrets to a namespace
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="enable_cluster_to_eso_and_vault.html">
      Enable Cluster to use External Secrets with Vault
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="add_external_secrets_to_ns.html">
-     Add External Secrets to a namespace
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="add_eso_to_cluster.html">
+    <a class="reference internal" href="install_es_operator_in_cluster.html">
      Add External Secrets Operator to an OPF cluster
     </a>
    </li>
@@ -264,6 +274,16 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Vault Backup Job
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="write_to_vault_with_k8s.html">
+     Secret creation using vault CLI and k8s auth
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="unsealing_vault.html">
+     Unsealing OPF Vault instance
     </a>
    </li>
    <li class="toctree-l2">
@@ -296,6 +316,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../cluster-scope/add_user_to_group.html">
      Adding User to an OCP team
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../cluster-scope/add_user_to_project_admin.html">
+     Giving a user project role access in the smaug cluster
     </a>
    </li>
    <li class="toctree-l2">
@@ -446,6 +471,16 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../observatorium/loki/add_loki_grafana_datasource.html">
+     Add a Loki Data Source in OperateFirst Grafana
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../observatorium/loki/loki_query_api.html">
+     Loki Query API
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../observatorium/thanos/README.html">
      Thanos Access
     </a>
@@ -555,6 +590,11 @@ const thebe_selector_output = ".output, .cell_output"
       </a>
      </li>
     </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../odh/seldon/README.html">
+     Seldon Operator
+    </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../odh/superset/README.html">
@@ -1094,10 +1134,10 @@ with vault, and that would introduce a circular dependency on the vault backup j
             <p class="prev-next-title">Restoring vault</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="runbook.html" title="next page">
+    <a class='right-next' id="next-link" href="write_to_vault_with_k8s.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Vault Runbook</p>
+        <p class="prev-next-title">Secret creation using vault CLI and k8s auth</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

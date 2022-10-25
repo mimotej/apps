@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Add External Secrets to a namespace &#8212; GitOps Docs</title>
+    <title>Unsealing OPF Vault instance &#8212; GitOps Docs</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Add External Secrets Operator to an OPF cluster" href="add_eso_to_cluster.html" />
-    <link rel="prev" title="Enable Cluster to use External Secrets with Vault" href="add_cluster_to_eso_and_vault.html" />
+    <link rel="next" title="Vault Runbook" href="runbook.html" />
+    <link rel="prev" title="Secret creation using vault CLI and k8s auth" href="write_to_vault_with_k8s.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -242,17 +242,27 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="add_cluster_to_eso_and_vault.html">
-     Enable Cluster to use External Secrets with Vault
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Add External Secrets to a namespace
+    <a class="reference internal" href="onboard_team_to_vault.html">
+     Onboard an OCP group to vault
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="add_eso_to_cluster.html">
+    <a class="reference internal" href="create_external_secret.html">
+     Create External Secret in Operate First
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="enable_es_in_namespace.html">
+     Enable External Secrets to a namespace
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="enable_cluster_to_eso_and_vault.html">
+     Enable Cluster to use External Secrets with Vault
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="install_es_operator_in_cluster.html">
      Add External Secrets Operator to an OPF cluster
     </a>
    </li>
@@ -264,6 +274,16 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="vault_backup_job.html">
      Vault Backup Job
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="write_to_vault_with_k8s.html">
+     Secret creation using vault CLI and k8s auth
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Unsealing OPF Vault instance
     </a>
    </li>
    <li class="toctree-l2">
@@ -296,6 +316,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../cluster-scope/add_user_to_group.html">
      Adding User to an OCP team
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../cluster-scope/add_user_to_project_admin.html">
+     Giving a user project role access in the smaug cluster
     </a>
    </li>
    <li class="toctree-l2">
@@ -446,6 +471,16 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../observatorium/loki/add_loki_grafana_datasource.html">
+     Add a Loki Data Source in OperateFirst Grafana
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../observatorium/loki/loki_query_api.html">
+     Loki Query API
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../observatorium/thanos/README.html">
      Thanos Access
     </a>
@@ -555,6 +590,11 @@ const thebe_selector_output = ".output, .cell_output"
       </a>
      </li>
     </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../odh/seldon/README.html">
+     Seldon Operator
+    </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../odh/superset/README.html">
@@ -873,7 +913,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/operate-first/apps/issues/new?title=Issue%20on%20page%20%2Fcontent/vault_eso/add_external_secrets_to_ns.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/operate-first/apps/issues/new?title=Issue%20on%20page%20%2Fcontent/vault_eso/unsealing_vault.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -901,7 +941,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/content/vault_eso/add_external_secrets_to_ns.md"
+        <a href="../../_sources/content/vault_eso/unsealing_vault.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -971,25 +1011,18 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#enable-namespace-to-fetch-secrets-from-vault">
-     1. Enable namespace to fetch secrets from vault
+    <a class="reference internal nav-link" href="#verify-there-are-sealed-pods">
+     Verify there are Sealed Pods
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#permit-role-to-access-namespace">
-       Permit role to access namespace
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#add-store-and-sa-to-namespace">
-       Add Store and SA to namespace
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-external-secret">
-     2. Create External Secret
+    <a class="reference internal nav-link" href="#unseal-pod">
+     Unseal pod
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#troubleshooting">
+     Troubleshooting
     </a>
    </li>
   </ul>
@@ -1003,7 +1036,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Add External Secrets to a namespace</h1>
+                <h1>Unsealing OPF Vault instance</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1024,25 +1057,18 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#enable-namespace-to-fetch-secrets-from-vault">
-     1. Enable namespace to fetch secrets from vault
+    <a class="reference internal nav-link" href="#verify-there-are-sealed-pods">
+     Verify there are Sealed Pods
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#permit-role-to-access-namespace">
-       Permit role to access namespace
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#add-store-and-sa-to-namespace">
-       Add Store and SA to namespace
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-external-secret">
-     2. Create External Secret
+    <a class="reference internal nav-link" href="#unseal-pod">
+     Unseal pod
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#troubleshooting">
+     Troubleshooting
     </a>
    </li>
   </ul>
@@ -1057,76 +1083,99 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="add-external-secrets-to-a-namespace">
-<h1>Add External Secrets to a namespace<a class="headerlink" href="#add-external-secrets-to-a-namespace" title="Permalink to this headline">#</a></h1>
-<p>These are instructions on how Operate First administrators can enable Operate First managed namespaces to pull secrets
-from vault. We do not currently offer support for using Operate First Vault instance for the general public.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="unsealing-opf-vault-instance">
+<h1>Unsealing OPF Vault instance<a class="headerlink" href="#unsealing-opf-vault-instance" title="Permalink to this headline">#</a></h1>
 <section id="pre-requisites">
 <h2>Pre-requisites<a class="headerlink" href="#pre-requisites" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>Vault access to <a class="reference external" href="https://vault-ui-vault.apps.smaug.na.operate-first.cloud">https://vault-ui-vault.apps.smaug.na.operate-first.cloud</a></p></li>
-<li><p>Cluster should be <a class="reference internal" href="add_cluster_to_eso_and_vault.html"><span class="doc std std-doc">integrated with opf vault instance</span></a></p></li>
-<li><p>Namespace admin access</p></li>
-<li><p>Know your env and cluster (referred to as <code class="docutils literal notranslate"><span class="pre">$env</span></code> and <code class="docutils literal notranslate"><span class="pre">$cluster</span></code> in this doc)</p></li>
-<li><p>Have a working clone of the operate-first/apps repo</p></li>
+<li><p>OCP Project Admin access to <a class="reference external" href="https://console-openshift-console.apps.smaug.na.operate-first.cloud/k8s/cluster/projects/vault">vault namespace</a></p></li>
+<li><p>Access to OPF Vault root token and unseal keys (there will be 5)</p>
+<ul>
+<li><p>These are accessible via the Operate First Bitwarden</p></li>
+</ul>
+</li>
 </ul>
 </section>
 <section id="steps">
 <h2>Steps<a class="headerlink" href="#steps" title="Permalink to this headline">#</a></h2>
-<p>There are 2 steps:</p>
-<ol class="simple">
-<li><p>Enable namespace to fetch secrets from vault</p></li>
-<li><p>Add external secrets</p></li>
-</ol>
-<p>The first step only needs to be done once per namespace.</p>
-<section id="enable-namespace-to-fetch-secrets-from-vault">
-<h3>1. Enable namespace to fetch secrets from vault<a class="headerlink" href="#enable-namespace-to-fetch-secrets-from-vault" title="Permalink to this headline">#</a></h3>
-<p>These steps need to be followed only once per namespace:</p>
-<section id="permit-role-to-access-namespace">
-<h4>Permit role to access namespace<a class="headerlink" href="#permit-role-to-access-namespace" title="Permalink to this headline">#</a></h4>
-<p>Navigate to vault: <a class="reference external" href="https://vault-ui-vault.apps.smaug.na.operate-first.cloud/ui/vault/access">https://vault-ui-vault.apps.smaug.na.operate-first.cloud/ui/vault/access</a></p>
-<blockquote>
-<div><p>Note: If you see Not authorized - permission denied instead of a populated window, please check your membership in the
-appropriate <code class="docutils literal notranslate"><span class="pre">apps/cluster-scope/overlays/prod/moc/smaug/groups/vault-*</span></code> group(s).</p>
-</div></blockquote>
-<p>Click this cluster’s <em>Auth Method</em>, example for MOC/Smaug, click <code class="docutils literal notranslate"><span class="pre">smaug-k8s</span></code>.</p>
-<p>Find the role <code class="docutils literal notranslate"><span class="pre">${env}-ops</span></code>, for example for Smaug/Infra/Curator clusters this is <code class="docutils literal notranslate"><span class="pre">moc-ops</span></code>, for OSC-Cl1/OSC-Cl2 clusters
-this is <code class="docutils literal notranslate"><span class="pre">osc-ops</span></code>. Click it.</p>
-<p>Click <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">Role</span></code>.</p>
-<p>Scroll to <code class="docutils literal notranslate"><span class="pre">Bound</span> <span class="pre">service</span> <span class="pre">account</span> <span class="pre">namespaces</span></code>.</p>
-<p>Enter your namespace you would like to integrate with vault.</p>
-</section>
-<section id="add-store-and-sa-to-namespace">
-<h4>Add Store and SA to namespace<a class="headerlink" href="#add-store-and-sa-to-namespace" title="Permalink to this headline">#</a></h4>
-<p>Navigate to <code class="docutils literal notranslate"><span class="pre">apps/cluster-scope/overlays/prod/${env}/${cluster}/secret-mgmt</span></code> and create a new directory named after
-your namespace. In this directory add <code class="docutils literal notranslate"><span class="pre">kustomization.yaml</span></code>:</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kustomize.config.k8s.io/v1beta1</span><span class="w"></span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Kustomization</span><span class="w"></span>
-<span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${namespace}</span><span class="w">  </span><span class="c1"># replace with your namespace</span><span class="w"></span>
-<span class="nt">resources</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">../base</span><span class="w"></span>
+<section id="verify-there-are-sealed-pods">
+<h3>Verify there are Sealed Pods<a class="headerlink" href="#verify-there-are-sealed-pods" title="Permalink to this headline">#</a></h3>
+<p>To verify if a Vault pod is in a sealed state first check each Vault pods’ status:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ oc project vault
+$ oc get pods
+$ oc get pods <span class="p">|</span> <span class="o">{</span> head -1<span class="p">;</span> grep pf-vault-*<span class="p">;</span> <span class="o">}</span>
+NAME                                   READY   STATUS      RESTARTS   AGE
+opf-vault-0                            <span class="m">1</span>/1     Running     <span class="m">0</span>          8h
+opf-vault-1                            <span class="m">0</span>/1     Running     <span class="m">0</span>          8h
+opf-vault-2                            <span class="m">1</span>/1     Running     <span class="m">0</span>          8h
 </pre></div>
 </div>
-<p>Then include this directory in  <code class="docutils literal notranslate"><span class="pre">apps/cluster-scope/overlays/prod/${env}/${cluster}/secret-mgmt/kustomization.yaml</span></code>.</p>
-<p>Commit your changes and make a PR.</p>
-</section>
-</section>
-<section id="create-external-secret">
-<h3>2. Create External Secret<a class="headerlink" href="#create-external-secret" title="Permalink to this headline">#</a></h3>
-<p>Refer to <a class="reference external" href="https://external-secrets.io/v0.5.6/provider-hashicorp-vault/">ESO Vault Docs</a> on how to create your secret.</p>
-<p>Be sure to reference the store we have created above in your secret:</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1beta1</span><span class="w"></span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ExternalSecret</span><span class="w"></span>
-<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
-<span class="nt">spec</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">secretStoreRef</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opf-vault-store</span><span class="w"> </span><span class="c1"># should match secret store name specified above</span><span class="w"></span>
-<span class="w">    </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SecretStore</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Add the rest of your secret templating/spec details here</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># ...</span><span class="w"></span>
+<p>If any of the pods are not ready, you will see <code class="docutils literal notranslate"><span class="pre">0/1</span></code> under the <code class="docutils literal notranslate"><span class="pre">READY</span></code> column. All pods will appear as <code class="docutils literal notranslate"><span class="pre">0/1</span></code> if they are
+sealed, see <a class="reference external" href="https://github.com/operate-first/apps/blob/master/vault/base/statefulsets/statefulset.yaml#L110">here</a> for this readiness check.</p>
+<p>We can further verify this Vault <em>pod</em> is sealed by running:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ oc rsh opf-vault-1
+$ vault status
+Key                Value
+---                -----
+Seal Type          shamir
+Initialized        <span class="nb">true</span>
+Sealed             <span class="nb">true</span>
+Total Shares       <span class="m">5</span>
+Threshold          <span class="m">3</span>
+Unseal Progress    <span class="m">0</span>/3
+Unseal Nonce       n/a
+Version            <span class="m">1</span>.9.2
+Storage Type       raft
+HA Enabled         <span class="nb">true</span>
+$
 </pre></div>
 </div>
+<p>If you see <code class="docutils literal notranslate"><span class="pre">Sealed</span> <span class="pre">true</span></code> like above, we know this pod (aka Vault node) is in a Sealed state.</p>
+</section>
+<section id="unseal-pod">
+<h3>Unseal pod<a class="headerlink" href="#unseal-pod" title="Permalink to this headline">#</a></h3>
+<p>Specify the following Environment Variables. All values available in Operate-First bitwarden, there are 5 unseal keys,
+we only need 3 to unseal, pick any 3.:</p>
+<p>While rsh’d into the sealed Vault node (i.e. pod) run the following to unseal:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ vault operator unseal
+Key <span class="o">(</span>will be hidden<span class="o">)</span>: &lt;enter-unseal-key-1&gt;
+$ vault operator unseal
+Key <span class="o">(</span>will be hidden<span class="o">)</span>: &lt;enter-unseal-key-2&gt;
+$ vault operator unseal
+Key <span class="o">(</span>will be hidden<span class="o">)</span>: &lt;enter-unseal-key-2&gt;
+</pre></div>
+</div>
+<p>Once done, run the following (while still rsh’d into the pod):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ oc <span class="nb">exec</span> -ti opf-vault-1 -- vault status
+/ $ vault status
+Key                     Value
+---                     -----
+Seal Type               shamir
+Initialized             <span class="nb">true</span>
+Sealed                  <span class="nb">false</span>
+...
+</pre></div>
+</div>
+<p>Verify that <code class="docutils literal notranslate"><span class="pre">Sealed</span></code> is set to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+<p>Confirm that the Vault node has rejoined the cluster:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/ $ vault operator raft list-peers
+Node                                    Address                                State       Voter
+----                                    -------                                -----       -----
+09b66090-446e-3974-bcb1-7080dacc07e7    opf-vault-0.opf-vault-internal:8201    follower    <span class="nb">true</span>
+56796c78-adac-b69e-8a62-c431b17c8b9b    opf-vault-2.opf-vault-internal:8201    leader      <span class="nb">true</span>
+e58ab8b5-62d7-cc6f-27e0-79656bfb8ab7    opf-vault-1.opf-vault-internal:8201    follower    <span class="nb">true</span>
+</pre></div>
+</div>
+<p>If you see the other cluster nodes listed, including the node just unsealed. Then you are done.</p>
+</section>
+<section id="troubleshooting">
+<h3>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>If you encounter <code class="docutils literal notranslate"><span class="pre">Missing</span> <span class="pre">Client</span> <span class="pre">token</span></code> error, then follow instructions <a class="reference external" href="https://www.operate-first.cloud/apps/content/vault_eso/runbook.html#missing-client-token">here</a>.</p></li>
+<li><p>If there are less than 3 nodes, then it’s possible the other nodes are also sealed and the same series of steps need
+to be repeated for that node.</p></li>
+<li><p>If there are still less than 3 nodes, some nodes may need to be rejoined to the cluster. Instructions [here].</p></li>
+</ul>
 </section>
 </section>
 </section>
@@ -1158,17 +1207,17 @@ your namespace. In this directory add <code class="docutils literal notranslate"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="add_cluster_to_eso_and_vault.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="write_to_vault_with_k8s.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Enable Cluster to use External Secrets with Vault</p>
+            <p class="prev-next-title">Secret creation using vault CLI and k8s auth</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="add_eso_to_cluster.html" title="next page">
+    <a class='right-next' id="next-link" href="runbook.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Add External Secrets Operator to an OPF cluster</p>
+        <p class="prev-next-title">Vault Runbook</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

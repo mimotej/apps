@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Adding ArgoCD Applications &#8212; GitOps Docs</title>
+    <title>Add External Secrets Operator to an OPF cluster &#8212; GitOps Docs</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Requesting more permissions for an ArgoCD Project (MOC)" href="add_permissions_to_project.html" />
-    <link rel="prev" title="ArgoCD" href="README.html" />
+    <link rel="next" title="Restoring vault" href="restore_vault.html" />
+    <link rel="prev" title="Enable Cluster to use External Secrets with Vault" href="enable_cluster_to_eso_and_vault.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -164,130 +164,130 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="README.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../argocd-gitops/README.html">
    ArgoCD
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Adding ArgoCD Applications
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="add_permissions_to_project.html">
-     Requesting more permissions for an ArgoCD Project (MOC)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="encrypting_applications.html">
-     How to encrypt apps in this repo
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="get_access_to_argocd.html">
-     Get access to ArgoCD
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="import_dev_gpg.html">
-     Import Development GPG Key
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="onboarding_to_argocd.html">
-     ArgoCD onboarding procedure
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="secret_management.html">
-     Secret management for applications
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="setup_argocd_dev_environment.html">
-     Deploying a development environment
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="update_argocd.html">
-     Steps for Upgrading ArgoCD
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="update_gpg_key.html">
-     Update gpg key
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="argocd_notifications.html">
-     Where and How do I add notifications to my ArgoCD apps?
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../vault_eso/README.html">
-   Secret Management
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../vault_eso/onboard_team_to_vault.html">
+    <a class="reference internal" href="../argocd-gitops/add_application.html">
+     Adding ArgoCD Applications
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../argocd-gitops/add_permissions_to_project.html">
+     Requesting more permissions for an ArgoCD Project (MOC)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../argocd-gitops/encrypting_applications.html">
+     How to encrypt apps in this repo
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../argocd-gitops/get_access_to_argocd.html">
+     Get access to ArgoCD
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../argocd-gitops/import_dev_gpg.html">
+     Import Development GPG Key
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../argocd-gitops/onboarding_to_argocd.html">
+     ArgoCD onboarding procedure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../argocd-gitops/secret_management.html">
+     Secret management for applications
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../argocd-gitops/setup_argocd_dev_environment.html">
+     Deploying a development environment
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../argocd-gitops/update_argocd.html">
+     Steps for Upgrading ArgoCD
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../argocd-gitops/update_gpg_key.html">
+     Update gpg key
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../argocd-gitops/argocd_notifications.html">
+     Where and How do I add notifications to my ArgoCD apps?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="README.html">
+   Secret Management
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="onboard_team_to_vault.html">
      Onboard an OCP group to vault
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../vault_eso/create_external_secret.html">
+    <a class="reference internal" href="create_external_secret.html">
      Create External Secret in Operate First
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../vault_eso/enable_es_in_namespace.html">
+    <a class="reference internal" href="enable_es_in_namespace.html">
      Enable External Secrets to a namespace
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../vault_eso/enable_cluster_to_eso_and_vault.html">
+    <a class="reference internal" href="enable_cluster_to_eso_and_vault.html">
      Enable Cluster to use External Secrets with Vault
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../vault_eso/install_es_operator_in_cluster.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Add External Secrets Operator to an OPF cluster
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../vault_eso/restore_vault.html">
+    <a class="reference internal" href="restore_vault.html">
      Restoring vault
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../vault_eso/vault_backup_job.html">
+    <a class="reference internal" href="vault_backup_job.html">
      Vault Backup Job
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../vault_eso/write_to_vault_with_k8s.html">
+    <a class="reference internal" href="write_to_vault_with_k8s.html">
      Secret creation using vault CLI and k8s auth
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../vault_eso/unsealing_vault.html">
+    <a class="reference internal" href="unsealing_vault.html">
      Unsealing OPF Vault instance
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../vault_eso/runbook.html">
+    <a class="reference internal" href="runbook.html">
      Vault Runbook
     </a>
    </li>
@@ -913,7 +913,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/operate-first/apps/issues/new?title=Issue%20on%20page%20%2Fcontent/argocd-gitops/add_application.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/operate-first/apps/issues/new?title=Issue%20on%20page%20%2Fcontent/vault_eso/install_es_operator_in_cluster.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -941,7 +941,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/content/argocd-gitops/add_application.md"
+        <a href="../../_sources/content/vault_eso/install_es_operator_in_cluster.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1000,17 +1000,32 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pre-requisites">
-   Pre-requisites
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Add External Secrets Operator to an OPF cluster
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#add-an-application-to-the-apps-repo-declaratively">
-     Add an Application to the Apps repo (declaratively)
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pre-requisites">
+     Pre-requisites:
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#deploy-the-operator">
+     Deploy the operator:
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#add-operatorconfig-resource">
+   Add OperatorConfig resource
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#add-the-argocd-app">
+   Add the ArgoCD app
+  </a>
  </li>
 </ul>
 
@@ -1021,7 +1036,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Adding ArgoCD Applications</h1>
+                <h1>Add External Secrets Operator to an OPF cluster</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1031,17 +1046,32 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pre-requisites">
-   Pre-requisites
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Add External Secrets Operator to an OPF cluster
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#add-an-application-to-the-apps-repo-declaratively">
-     Add an Application to the Apps repo (declaratively)
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pre-requisites">
+     Pre-requisites:
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#deploy-the-operator">
+     Deploy the operator:
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#add-operatorconfig-resource">
+   Add OperatorConfig resource
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#add-the-argocd-app">
+   Add the ArgoCD app
+  </a>
  </li>
 </ul>
 
@@ -1053,29 +1083,36 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="adding-argocd-applications">
-<h1>Adding ArgoCD Applications<a class="headerlink" href="#adding-argocd-applications" title="Permalink to this headline">#</a></h1>
-<p>This doc explains how to add ArgoCD Applications declaratively to the <code class="docutils literal notranslate"><span class="pre">apps</span></code> repo.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="add-external-secrets-operator-to-an-opf-cluster">
+<h1>Add External Secrets Operator to an OPF cluster<a class="headerlink" href="#add-external-secrets-operator-to-an-opf-cluster" title="Permalink to this headline">#</a></h1>
 <section id="pre-requisites">
-<h2>Pre-requisites<a class="headerlink" href="#pre-requisites" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p>You should have <a class="reference external" href="https://kubectl.docs.kubernetes.io/installation/kustomize/">kustomize</a> installed</p></li>
-<li><p>You should be familiar with <a class="reference external" href="https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/#bases-and-overlays">kustomize overlays</a></p></li>
-<li><p>You should be familiar with what an <a class="reference external" href="https://argoproj.github.io/argo-cd/operator-manual/declarative-setup/#applications">ArgoCD application</a> is.</p></li>
-<li><p>You or your team should have been on boarded to ArgoCD, and have an ArgoCD project created. If you do not have one please request one for your team by filing this <a class="reference external" href="https://github.com/operate-first/support/issues/new?assignees=first-operator&amp;labels=kind%2Fonboarding%2Carea%2Fargocd&amp;template=onboarding_argocd.yaml&amp;title=PROJECT%3A+%3Cname%3E">issue here.</a></p></li>
-</ul>
-<section id="add-an-application-to-the-apps-repo-declaratively">
-<h3>Add an Application to the Apps repo (declaratively)<a class="headerlink" href="#add-an-application-to-the-apps-repo-declaratively" title="Permalink to this headline">#</a></h3>
-<p>All our <code class="docutils literal notranslate"><span class="pre">clusters</span></code> belong to some <code class="docutils literal notranslate"><span class="pre">environment</span></code>. The list of our <code class="docutils literal notranslate"><span class="pre">environments</span></code> can be found <a class="reference external" href="https://github.com/operate-first/apps/tree/master/argocd/overlays/moc-infra/applications/envs">here</a>. Within each <code class="docutils literal notranslate"><span class="pre">environment</span></code> you will find a list of clusters. For example within <code class="docutils literal notranslate"><span class="pre">moc</span></code> environment, you will find clusters <code class="docutils literal notranslate"><span class="pre">infra</span></code> and <code class="docutils literal notranslate"><span class="pre">smaug</span></code>. Pick one such cluster that you would like to deploy to. Let’s say you would like to deploy to cluster called <code class="docutils literal notranslate"><span class="pre">${CLUSTER_NAME}</span></code> in environment <code class="docutils literal notranslate"><span class="pre">${ENV}</span></code>. Then follow these steps:</p>
-<ul class="simple">
-<li><p>See ArgoCD Docs for how to create an ArgoCD <code class="docutils literal notranslate"><span class="pre">Application</span></code> <a class="reference external" href="https://argoproj.github.io/argo-cd/operator-manual/declarative-setup/#applications">here</a>.</p></li>
-<li><p>Ensure that the <code class="docutils literal notranslate"><span class="pre">spec.destination</span></code> field in your Argocd <code class="docutils literal notranslate"><span class="pre">Applicaiton</span></code> matches the <em>cluster name</em> as it’s stored in ArgoCD. To get this value, you can search the <code class="docutils literal notranslate"><span class="pre">metadata.name</span></code> in the clusters found <a class="reference external" href="https://github.com/operate-first/apps/tree/master/acm/overlays/moc/infra/managedclusters">here</a>. Or look at any of the other manifests in this repo and find the one that corresponds to <code class="docutils literal notranslate"><span class="pre">${CLUSTER_NAME}</span></code>.</p></li>
-<li><p>Ensure that your <code class="docutils literal notranslate"><span class="pre">spec.project</span></code> matches your team’s ArgoCD project.</p></li>
-<li><p>Add your ArgoCD Application to <code class="docutils literal notranslate"><span class="pre">argocd/overlays/moc-infra/applications/envs/${ENV}/${CLUSTER_NAME}/{$PROJECT}</span></code> where <code class="docutils literal notranslate"><span class="pre">{$PROJECT}</span></code> correlates with your team’s project.</p></li>
-<li><p>Add this resource’s file name to the <code class="docutils literal notranslate"><span class="pre">resource</span></code> field list in <code class="docutils literal notranslate"><span class="pre">argocd/overlays/moc-infra/applications/envs/${ENV}/${CLUSTER_NAME}/{$PROJECT}/kustomization.yaml</span></code> .</p></li>
-</ul>
+<h2>Pre-requisites:<a class="headerlink" href="#pre-requisites" title="Permalink to this headline">#</a></h2>
+<p>No pre-requisites, anyone can make this PR, additional ArgoCD access may be required to verify Argocd Apps are
+successfully synced, and resources are applied.</p>
+</section>
+<section id="deploy-the-operator">
+<h2>Deploy the operator:<a class="headerlink" href="#deploy-the-operator" title="Permalink to this headline">#</a></h2>
+<p>Add the <a class="reference external" href="https://github.com/operate-first/apps/tree/master/cluster-scope/bundles/external-secrets-operator">ESO bundle</a> to the <code class="docutils literal notranslate"><span class="pre">cluster-scope/overlay/prod/$ENV/$CLUSTER/kustomization.yaml</span></code>.</p>
+<p>The OLM operator is a helm chart deployer, and lives in the openshift-operators namespace. We use this operator to
+deploy the <em>actual</em> operator via an <code class="docutils literal notranslate"><span class="pre">OperatorConfig</span></code> resource, which essentially allows us to specify the helm chart values
+via an OCP resource. The bundle above creates the namespace where this resource will live. We deploy this resource
+separately via an argocd app.</p>
 </section>
 </section>
+<section class="tex2jax_ignore mathjax_ignore" id="add-operatorconfig-resource">
+<h1>Add OperatorConfig resource<a class="headerlink" href="#add-operatorconfig-resource" title="Permalink to this headline">#</a></h1>
+<blockquote>
+<div><p>Note: For details on this resource see OLM page for ESO <a class="reference external" href="https://operatorhub.io/operator/external-secrets-operator">here</a></p>
+</div></blockquote>
+<p>Add your <code class="docutils literal notranslate"><span class="pre">OperatorConfig</span></code> to the target cluster’s overlay found at the root of the <code class="docutils literal notranslate"><span class="pre">operate-first/apps</span></code> repo
+here: <code class="docutils literal notranslate"><span class="pre">operate-first/apps/external-secrets/overlays/$ENV/$CLUSTER</span></code>. If you prefer the default config, feel free to just
+leverage the one in <code class="docutils literal notranslate"><span class="pre">base</span></code> directory.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="add-the-argocd-app">
+<h1>Add the ArgoCD app<a class="headerlink" href="#add-the-argocd-app" title="Permalink to this headline">#</a></h1>
+<p>Follow the instructions <a class="reference internal" href="../argocd-gitops/add_application.html"><span class="doc std std-doc">here</span></a> to add your ArgoCD app. In general we recommend adding it to the
+<code class="docutils literal notranslate"><span class="pre">cluster-managerment</span></code> ArgoCD Project.</p>
+<p>Commit your changes and create a PR.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1091,7 +1128,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./content/argocd-gitops"
+            path: "./content/vault_eso"
         },
         predefinedOutput: true
     }
@@ -1105,17 +1142,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="README.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="enable_cluster_to_eso_and_vault.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">ArgoCD</p>
+            <p class="prev-next-title">Enable Cluster to use External Secrets with Vault</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="add_permissions_to_project.html" title="next page">
+    <a class='right-next' id="next-link" href="restore_vault.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Requesting more permissions for an ArgoCD Project (MOC)</p>
+        <p class="prev-next-title">Restoring vault</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

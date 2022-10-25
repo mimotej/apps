@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Add External Secrets Operator to an OPF cluster &#8212; GitOps Docs</title>
+    <title>Secret creation using vault CLI and k8s auth &#8212; GitOps Docs</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Restoring vault" href="restore_vault.html" />
-    <link rel="prev" title="Add External Secrets to a namespace" href="add_external_secrets_to_ns.html" />
+    <link rel="next" title="Unsealing OPF Vault instance" href="unsealing_vault.html" />
+    <link rel="prev" title="Vault Backup Job" href="vault_backup_job.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -242,17 +242,27 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="add_cluster_to_eso_and_vault.html">
+    <a class="reference internal" href="onboard_team_to_vault.html">
+     Onboard an OCP group to vault
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="create_external_secret.html">
+     Create External Secret in Operate First
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="enable_es_in_namespace.html">
+     Enable External Secrets to a namespace
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="enable_cluster_to_eso_and_vault.html">
      Enable Cluster to use External Secrets with Vault
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="add_external_secrets_to_ns.html">
-     Add External Secrets to a namespace
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+    <a class="reference internal" href="install_es_operator_in_cluster.html">
      Add External Secrets Operator to an OPF cluster
     </a>
    </li>
@@ -264,6 +274,16 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="vault_backup_job.html">
      Vault Backup Job
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Secret creation using vault CLI and k8s auth
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="unsealing_vault.html">
+     Unsealing OPF Vault instance
     </a>
    </li>
    <li class="toctree-l2">
@@ -296,6 +316,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../cluster-scope/add_user_to_group.html">
      Adding User to an OCP team
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../cluster-scope/add_user_to_project_admin.html">
+     Giving a user project role access in the smaug cluster
     </a>
    </li>
    <li class="toctree-l2">
@@ -446,6 +471,16 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../observatorium/loki/add_loki_grafana_datasource.html">
+     Add a Loki Data Source in OperateFirst Grafana
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../observatorium/loki/loki_query_api.html">
+     Loki Query API
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../observatorium/thanos/README.html">
      Thanos Access
     </a>
@@ -555,6 +590,11 @@ const thebe_selector_output = ".output, .cell_output"
       </a>
      </li>
     </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../odh/seldon/README.html">
+     Seldon Operator
+    </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../odh/superset/README.html">
@@ -873,7 +913,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/operate-first/apps/issues/new?title=Issue%20on%20page%20%2Fcontent/vault_eso/add_eso_to_cluster.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/operate-first/apps/issues/new?title=Issue%20on%20page%20%2Fcontent/vault_eso/write_to_vault_with_k8s.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -901,7 +941,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/content/vault_eso/add_eso_to_cluster.md"
+        <a href="../../_sources/content/vault_eso/write_to_vault_with_k8s.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -960,27 +1000,32 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Add External Secrets Operator to an OPF cluster
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pre-requisites">
+   Pre-requisites
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#deploy-the-operator">
-     Deploy the operator:
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#steps">
+   Steps
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-new-role-policy">
+     Create new role/policy
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#enable-namespace-and-service-account-to-write-secrets-to-vault">
+     Enable namespace and service account to write secrets to vault
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#login-via-vault-cli-and-create-secret">
+     Login via vault CLI and create secret
     </a>
    </li>
   </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#add-operatorconfig-resource">
-   Add OperatorConfig resource
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#add-the-argocd-app">
-   Add the ArgoCD app
-  </a>
  </li>
 </ul>
 
@@ -991,7 +1036,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Add External Secrets Operator to an OPF cluster</h1>
+                <h1>Secret creation using vault CLI and k8s auth</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1001,27 +1046,32 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Add External Secrets Operator to an OPF cluster
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pre-requisites">
+   Pre-requisites
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#deploy-the-operator">
-     Deploy the operator:
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#steps">
+   Steps
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-new-role-policy">
+     Create new role/policy
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#enable-namespace-and-service-account-to-write-secrets-to-vault">
+     Enable namespace and service account to write secrets to vault
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#login-via-vault-cli-and-create-secret">
+     Login via vault CLI and create secret
     </a>
    </li>
   </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#add-operatorconfig-resource">
-   Add OperatorConfig resource
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#add-the-argocd-app">
-   Add the ArgoCD app
-  </a>
  </li>
 </ul>
 
@@ -1033,31 +1083,76 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="add-external-secrets-operator-to-an-opf-cluster">
-<h1>Add External Secrets Operator to an OPF cluster<a class="headerlink" href="#add-external-secrets-operator-to-an-opf-cluster" title="Permalink to this headline">#</a></h1>
-<section id="deploy-the-operator">
-<h2>Deploy the operator:<a class="headerlink" href="#deploy-the-operator" title="Permalink to this headline">#</a></h2>
-<p>Add the <a class="reference external" href="https://github.com/operate-first/apps/tree/master/cluster-scope/bundles/external-secrets-operator">ESO bundle</a> to the <code class="docutils literal notranslate"><span class="pre">cluster-scope/overlay/prod/$ENV/$CLUSTER/kustomization.yaml</span></code>.</p>
-<p>The OLM operator is a helm chart deployer, and lives in the openshift-operators namespace. We use this operator to
-deploy the <em>actual</em> operator via an <code class="docutils literal notranslate"><span class="pre">OperatorConfig</span></code> resource, which essentially allows us to specify the helm chart values
-via an OCP resource. The bundle above creates the namespace where this resource will live. We deploy this resource
-separately via an argocd app.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="secret-creation-using-vault-cli-and-k8s-auth">
+<h1>Secret creation using vault CLI and k8s auth<a class="headerlink" href="#secret-creation-using-vault-cli-and-k8s-auth" title="Permalink to this headline">#</a></h1>
+<p>These are instructions on how you can write to our vault instance via the vault CLI using Kubernetes auth.</p>
+<p>This might be useful for creating secrets dynamically during a <code class="docutils literal notranslate"><span class="pre">CronJob</span></code> or a <code class="docutils literal notranslate"><span class="pre">Tekton</span> <span class="pre">Task</span></code>.</p>
+<section id="pre-requisites">
+<h2>Pre-requisites<a class="headerlink" href="#pre-requisites" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Install <a class="reference external" href="https://developer.hashicorp.com/vault/docs/install">vault CLI</a> and <a class="reference external" href="https://stedolan.github.io/jq/download/">jq</a></p></li>
+<li><p>Cluster should be <a class="reference internal" href="enable_cluster_to_eso_and_vault.html"><span class="doc std std-doc">integrated with opf vault instance</span></a></p></li>
+<li><p>Admin access to <a class="reference external" href="https://vault-ui-vault.apps.smaug.na.operate-first.cloud">vault</a></p></li>
+<li><p>Know your cluster, namespace and service account (referred to as <code class="docutils literal notranslate"><span class="pre">${cluster}</span></code>, <code class="docutils literal notranslate"><span class="pre">${namespace}</span></code> and <code class="docutils literal notranslate"><span class="pre">${service_account}</span></code> in this doc)</p></li>
+</ul>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="add-operatorconfig-resource">
-<h1>Add OperatorConfig resource<a class="headerlink" href="#add-operatorconfig-resource" title="Permalink to this headline">#</a></h1>
+<section id="steps">
+<h2>Steps<a class="headerlink" href="#steps" title="Permalink to this headline">#</a></h2>
+<p>There are 3 steps:</p>
+<ol class="simple">
+<li><p>Create new role/policy</p></li>
+<li><p>Enable namespace and service account to write secrets to vault</p></li>
+<li><p>Login via vault CLI and create secret</p></li>
+</ol>
+<section id="create-new-role-policy">
+<h3>Create new role/policy<a class="headerlink" href="#create-new-role-policy" title="Permalink to this headline">#</a></h3>
+<p>Navigate to vault: <a class="reference external" href="https://vault-ui-vault.apps.smaug.na.operate-first.cloud/ui/vault/access">https://vault-ui-vault.apps.smaug.na.operate-first.cloud/ui/vault/access</a></p>
+<p>Click the <code class="docutils literal notranslate"><span class="pre">${cluster}</span></code>’s <em>Auth Method</em>, example for MOC/Smaug, click <code class="docutils literal notranslate"><span class="pre">smaug-k8s</span></code>.</p>
 <blockquote>
-<div><p>Note: For details on this resource see OLM page for ESO <a class="reference external" href="https://operatorhub.io/operator/external-secrets-operator">here</a></p>
+<div><p>Note: If an existing role with a desired policy is present, you don’t need to create a new role, just skip to step 2</p>
 </div></blockquote>
-<p>Add your <code class="docutils literal notranslate"><span class="pre">OperatorConfig</span></code> to the target cluster’s overlay found at the root of the <code class="docutils literal notranslate"><span class="pre">operate-first/apps</span></code> repo
-here: <code class="docutils literal notranslate"><span class="pre">operate-first/apps/external-secrets/overlays/$ENV/$CLUSTER</span></code>. If you prefer the default config, feel free to just
-leverage the one in <code class="docutils literal notranslate"><span class="pre">base</span></code> directory.</p>
+<p>Click <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">Role</span></code>.</p>
+<p>Fill in the <code class="docutils literal notranslate"><span class="pre">Name</span></code> and <code class="docutils literal notranslate"><span class="pre">Alias</span> <span class="pre">name</span> <span class="pre">source</span></code> with the following values:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Name</span><span class="o">=&lt;</span><span class="n">your_distinct_role_name</span><span class="o">&gt;</span>
+<span class="n">Alias</span> <span class="n">name</span> <span class="n">source</span><span class="o">=</span><span class="n">serviceaccount_uid</span>
+</pre></div>
+</div>
+<p>Navigate to <code class="docutils literal notranslate"><span class="pre">Generated</span> <span class="pre">Token's</span> <span class="pre">Policies</span></code> and enter the name of an existing policy or create a new one.</p>
+<blockquote>
+<div><p>Note: If your configuration requires write access to secrets, you most likely need to create a new policy that permits write access</p>
+</div></blockquote>
+<p>Policies can be viewed or created in the <code class="docutils literal notranslate"><span class="pre">Policies</span></code> tab in the top navigation bar.</p>
+<p>For a reference no how to create policies check the <a class="reference external" href="https://developer.hashicorp.com/vault/docs/concepts/policies">vault documentation on policies</a>.</p>
+<p>Click <code class="docutils literal notranslate"><span class="pre">Tokens</span></code> at the bottom and then click <code class="docutils literal notranslate"><span class="pre">Generated</span> <span class="pre">Token's</span> <span class="pre">Initial</span> <span class="pre">TTL</span></code> and set it to <code class="docutils literal notranslate"><span class="pre">3600</span></code></p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="add-the-argocd-app">
-<h1>Add the ArgoCD app<a class="headerlink" href="#add-the-argocd-app" title="Permalink to this headline">#</a></h1>
-<p>Follow the instructions <a class="reference internal" href="../argocd-gitops/add_application.html"><span class="doc std std-doc">here</span></a> to add your ArgoCD app. In general we recommend adding it to the
-<code class="docutils literal notranslate"><span class="pre">cluster-managerment</span></code> ArgoCD Project.</p>
-<p>Commit your changes and create a PR.</p>
+<section id="enable-namespace-and-service-account-to-write-secrets-to-vault">
+<h3>Enable namespace and service account to write secrets to vault<a class="headerlink" href="#enable-namespace-and-service-account-to-write-secrets-to-vault" title="Permalink to this headline">#</a></h3>
+<p>In your desired role click <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">Role</span></code>.</p>
+<p>Navigate to <code class="docutils literal notranslate"><span class="pre">Bound</span> <span class="pre">service</span> <span class="pre">account</span> <span class="pre">namespaces</span></code>.</p>
+<p>Enter your <code class="docutils literal notranslate"><span class="pre">${namespace}</span></code> you would like to integrate with vault.</p>
+<p>Do the same thing for <code class="docutils literal notranslate"><span class="pre">Bound</span> <span class="pre">service</span> <span class="pre">account</span> <span class="pre">names</span></code> but enter your <code class="docutils literal notranslate"><span class="pre">${service_account}</span></code> that you created in your namespace.</p>
+</section>
+<section id="login-via-vault-cli-and-create-secret">
+<h3>Login via vault CLI and create secret<a class="headerlink" href="#login-via-vault-cli-and-create-secret" title="Permalink to this headline">#</a></h3>
+<p>Login to a cluster your namespace belongs to with <code class="docutils literal notranslate"><span class="pre">oc</span> <span class="pre">login</span></code>.</p>
+<p>Get the service account token with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">SA_TOKEN</span><span class="o">=</span><span class="k">$(</span>oc sa get-token <span class="si">${</span><span class="nv">service_account</span><span class="si">}</span> -n <span class="si">${</span><span class="nv">namespace</span><span class="si">}</span><span class="k">)</span>
+</pre></div>
+</div>
+<p>Set the vault instance address to our instance by exporting the <code class="docutils literal notranslate"><span class="pre">VAULT_ADDR</span></code> environmental variable:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">VAULT_ADDR</span><span class="o">=</span>https://vault-ui-vault.apps.smaug.na.operate-first.cloud
+</pre></div>
+</div>
+<p>Get client token with vault cli using the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vault write auth/<span class="si">${</span><span class="nv">cluster</span><span class="si">}</span>-k8s/login <span class="nv">role</span><span class="o">=</span>&lt;existing_or_created_role&gt; <span class="nv">jwt</span><span class="o">=</span><span class="nv">$SA_TOKEN</span> -format<span class="o">=</span>json <span class="p">|</span> jq -r <span class="s1">&#39;.auth.client_token&#39;</span>
+</pre></div>
+</div>
+<p>This is the only time you will see the token, unless you generate a new one. Make sure you save it in a safe place for future use.</p>
+<p>The token can now be used to login via the vault CLI: <code class="docutils literal notranslate"><span class="pre">vault</span> <span class="pre">login</span> <span class="pre">${client_token}</span></code></p>
+<p>You can now check if the process worked by issuing this command: <code class="docutils literal notranslate"><span class="pre">vault</span> <span class="pre">status</span></code>.</p>
+<p>You should now be able to write secrets using the vault cli. To see how to write secrets check the <a class="reference external" href="https://developer.hashicorp.com/vault/docs/commands/kv">vault upstream documentation</a>.</p>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1087,17 +1182,17 @@ leverage the one in <code class="docutils literal notranslate"><span class="pre"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="add_external_secrets_to_ns.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="vault_backup_job.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Add External Secrets to a namespace</p>
+            <p class="prev-next-title">Vault Backup Job</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="restore_vault.html" title="next page">
+    <a class='right-next' id="next-link" href="unsealing_vault.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Restoring vault</p>
+        <p class="prev-next-title">Unsealing OPF Vault instance</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
