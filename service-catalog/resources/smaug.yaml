@@ -6,7 +6,7 @@ metadata:
   description: Smaug is a public operate first cluster open to user applications and workloads
   annotations:
     operate-first.cloud/logo-url: https://upload.wikimedia.org/wikipedia/commons/3/3a/OpenShift-LogoType.svg
-    prometheus.io/alert: cluster="smaug"
+    prometheus.io/alert: all
   links:
     - url: https://console-openshift-console.apps.smaug.na.operate-first.cloud/
       title: Smaug cluster OCP console
