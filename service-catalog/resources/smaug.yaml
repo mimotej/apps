@@ -7,6 +7,7 @@ metadata:
   annotations:
     operate-first.cloud/logo-url: https://upload.wikimedia.org/wikipedia/commons/3/3a/OpenShift-LogoType.svg
     prometheus.io/alert: all
+    prometheus.io/labels: "managed_cluster_id=d448ae7-05f1-42cc-aacc-3122a8ad0184"
   links:
     - url: https://console-openshift-console.apps.smaug.na.operate-first.cloud/
       title: Smaug cluster OCP console
