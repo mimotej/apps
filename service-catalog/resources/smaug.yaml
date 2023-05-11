@@ -8,7 +8,7 @@ metadata:
     operate-first.cloud/logo-url: https://upload.wikimedia.org/wikipedia/commons/3/3a/OpenShift-LogoType.svg
     prometheus.io/alert: all
     prometheus.io/labels: "managed_cluster_id=26e16305-3e6d-4c87-aca8-10bc6b49f1aa,severity=moderate"
-    kubernetes.io/api-server: "https://api.clustertestingground.lab.psi.pnq2.redhat.com:6443"
+    kubernetes.io/api-server: "https://api.smaug.na.operate-first.cloud:6443"
 
   links:
     - url: https://console-openshift-console.apps.smaug.na.operate-first.cloud/
